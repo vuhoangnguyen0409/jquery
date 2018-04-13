@@ -1,0 +1,65 @@
+@charset "UTF-8";
+/* ******************************************************************
+
+	--style.css--
+************************************************************************/
+/*----------------------
+transform
+------------------------*/
+
+
+
+/*-------------------------------------------------------
+header
+---------------------------------------------------------*/
+header {
+
+}
+
+/*-------------------------------------------------------
+content
+---------------------------------------------------------*/
+#content {
+	background:url(../img/common/bg.png);
+	position: relative;
+	text-align: center;
+	overflow: hidden;
+	box-sizing: border-box;
+	transition: box-shadow 0.3s;
+}
+.pippi {
+	position: absolute;
+	z-index:1;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	/*height: 100px;
+	width: 100px;*/
+}
+.pippi img {
+	width: 100%;
+}
+.cake {
+	position: absolute;
+	z-index:2;
+}
+.score {
+	position: fixed;
+	top: 10px;
+	left: 10px;
+	font-size: 50px;
+	font-weight:bold;
+}
+.ball {
+	position: fixed;
+}
+/*-----------
+outside window
+------------*/
+.stop {
+	box-shadow: inset 0 0 0 10px yellow;
+}
+
+/*-------------------------------------------------------
+footer
+---------------------------------------------------------*/

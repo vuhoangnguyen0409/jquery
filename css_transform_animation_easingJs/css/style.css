@@ -1,0 +1,66 @@
+@charset "UTF-8";
+/* ******************************************************************
+
+	--style.css--
+************************************************************************/
+/*----------------------
+transform
+------------------------*/
+body { 
+	padding: 200px;
+	/*transform: rotate(9deg); */
+}
+.skew img {
+	transform: skewX(21deg);
+}
+.flipping img:nth-child(1) {
+	vertical-align: middle;
+	float: left;
+}
+.flipping img:nth-child(2) {
+	transform: scaleX(-1);
+	filter: FlipH;
+	-ms-filter: "FlipH";
+	float: none;
+}
+/*----------------------
+animation
+------------------------*/
+.transition img {
+	box-shadow: 10px 10px 3px rgba(0, 0, 0, 0.3);
+}
+.transition img:hover {
+	transform: rotate(360deg);
+	transition-duration: 10s;
+	transition-timing-function: ease-in; /*nhanh dan*/
+}
+
+div#redball {
+	width: 150px; height: 150px;
+	border: 2px solid #000;
+	background: red;
+	border-radius: 50%;
+	position: absolute;
+	animation: bounce 2s infinite alternate; /*ten thoigian laplai 0->100_100->0 */
+}
+@keyframes bounce {
+	0% { top: 100%; }
+	100% { top: 0; }
+}
+
+
+
+/*-------------------------------------------------------
+header
+---------------------------------------------------------*/
+header {
+
+}
+
+/*-------------------------------------------------------
+content
+---------------------------------------------------------*/
+
+/*-------------------------------------------------------
+footer
+---------------------------------------------------------*/
