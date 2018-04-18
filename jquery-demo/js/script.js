@@ -1,4 +1,26 @@
 //$(document).ready(function() {
+// prvent inspect , vier-source
+jQuery(document).ready(function($){
+    $(window).on("contextmenu",function(){
+       return false;
+    });
+
+    $(window).keydown(function(event){
+        if(event.keyCode==123){
+            return false;
+        }
+        else if(event.ctrlKey && event.shiftKey && event.keyCode==73){
+              return false;  //Prevent from ctrl+shift+i
+           }
+        else if(event.ctrlKey && event.keyCode==85){
+              return false; //Prevent from ctrl + u
+           }
+        else if(event.altKey){
+            return false;  //Prevent from Alt
+
+        }
+    });
+});
 $(window).load(function() {
   // jquery UI
   $("#date").datepicker();
