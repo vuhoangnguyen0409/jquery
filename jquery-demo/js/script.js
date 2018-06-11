@@ -81,21 +81,19 @@ $(window).load(function() {
   $window.on('scroll resize', check_if_in_view);
   $window.trigger('scroll');
 
-  //detect pc vs tablet
-  function detectPcTablet() {
-    var windowW = $(window).width();
-    if (windowW < 768) {
-      if ( !($("body").hasClass("tablet")) ) {
-        $("body").addClass("tablet");
-      }
+  //resize window
+  $(window).on('load resize', function() {
+    var win_w = $(window).width();
+    if (468 < win_w && win_w < 768) {
+      $('body').removeClass('sp');
+      $('body').addClass('tbl');
+    } else if (win_w < 468) {
+      $('body').removeClass('tbl');
+      $('body').addClass('sp');
+    } else {
+      $('body').removeClass('tbl sp');
+      $('.box').removeAttr('style');
     }
-    else {
-      $("body").removeClass("tablet");
-    }
-  }
-  detectPcTablet();
-  $(window).on("resize", function(){
-    detectPcTablet();
   });
 
   /////////////////////////////     margin header fixed  ///////////////
